@@ -23,7 +23,8 @@ RUN apt-get update && apt-get install -y \
     vim \
     unzip \
     git \
-    curl
+    curl \
+    php7.3-ldap
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
