@@ -5,7 +5,10 @@
 Example Use:
 
 ```
-FROM yasuoyuhao/php-fpm-composer:7.3.0
+FROM yasuoyuhao/php-fpm-composer:7.3.1
+
+# Use npm
+RUN npm install
 
 # Set working directory
 COPY ./php/local.ini /usr/local/etc/php/conf.d/local.ini
