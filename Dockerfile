@@ -8,6 +8,9 @@ LABEL maintainer="yasuoyuhao@gmail.com"
 # Set working directory
 # WORKDIR /var/www
 
+# install npm
+RUN curl -sL https://deb.nodesource.com/setup_12.x | bash -
+
 # Install dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -24,7 +27,8 @@ RUN apt-get update && apt-get install -y \
     vim \
     unzip \
     git \
-    curl
+    curl \
+    nodejs
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
